@@ -1,0 +1,21 @@
+version: 0.1
+component: build
+timeoutInSeconds: 6000
+runAs: root
+shell: bash
+env:
+  variables:
+    tag_name : "1.1"
+  exportedVariables:
+    - tag_name
+
+steps:
+  - type: Command
+    name: "Dockerize"
+    command: |
+      docker build . -t dlcbld_hello_world:${tag_name}
+
+outputArtifacts:
+  - name: dlcbld_hello
+    type: DOCKER_IMAGE
+    location: dlcbld_hello_world:1.1
