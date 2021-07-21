@@ -8,6 +8,7 @@ env:
     tag_name : "1.1"
   exportedVariables:
     - tag_name
+    - version
 
 steps:
   - type: Command
@@ -16,6 +17,7 @@ steps:
       docker build . -t dlcbld_hello_world:${tag_name}
       docker run  dlcbld_hello_world:${tag_name} > docktest_result.txt
       echo "Done" >> docktest_result.txt
+      version=`cat ./version.txt`
 
 outputArtifacts:
   - name: dlcbld_hello
