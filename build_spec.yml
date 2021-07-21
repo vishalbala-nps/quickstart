@@ -17,7 +17,7 @@ steps:
       docker build . -t dlcbld_hello_world:${tag_name}
       docker run  dlcbld_hello_world:${tag_name} > docktest_result.txt
       echo "Done" >> docktest_result.txt
-      version=`cat ./version.txt`
+      version=`date +%d%H%M%S`
 
 outputArtifacts:
   - name: dlcbld_hello
