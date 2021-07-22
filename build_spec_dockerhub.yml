@@ -5,10 +5,10 @@ runAs: root
 shell: bash
 env:
   variables:
-    DOCKERHUB_REPO="dlcbldtest"
+    DOCKERHUB_REPO : "dlcbldtest"
   secretVariables:
-    DOCKERHUB_USERNAME="ocid1.vaultsecret.oc1.iad.amaaaaaa4725fbqaz3oyat7a62piig4hop3lqx7vxmaxc4nbegkztdfjupgq"
-    DOCKERHUB_PASSWD="ocid1.vaultsecret.oc1.iad.amaaaaaa4725fbqatw3wl62kqlux2753ozwmspkqncmul465zzvknobnlfka"
+    DOCKERHUB_USERNAME : "ocid1.vaultsecret.oc1.iad.amaaaaaa4725fbqaz3oyat7a62piig4hop3lqx7vxmaxc4nbegkztdfjupgq"
+    DOCKERHUB_PASSWD : "ocid1.vaultsecret.oc1.iad.amaaaaaa4725fbqatw3wl62kqlux2753ozwmspkqncmul465zzvknobnlfka"
     
   exportedVariables:
     - tag_name
