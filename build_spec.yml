@@ -26,3 +26,5 @@ outputArtifacts:
   - name: docktest_result
     type: BINARY
     location: docktest_result.txt
+    
+    
